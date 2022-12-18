@@ -1,0 +1,4 @@
+rootProject.name = 'reproduce-close-application-run-does-not-exit'
+
+include 'micronaut-example'
+include 'spring-example'

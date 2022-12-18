@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+defaultTasks('defaultTask')
+
+repositories.mavenCentral()
+
+dependencies {
+    compileOnly('org.projectlombok:lombok:1.18.24')
+    annotationProcessor('org.projectlombok:lombok:1.18.24')
+}
+
+tasks.register('defaultTask', JavaExec) {
+    it.group('verification')
+    it.description('run the other two verification tasks')
+
+    // compile the other two first
+    it.dependsOn(':micronaut-example:shadowJar')
+    it.dependsOn(':spring-example:bootJar')
+
+    it.mainClass.set 'Reproducer'
+    it.classpath(sourceSets.main.runtimeClasspath)
+    it.args(rootProject.rootDir.getPath())
+}
