@@ -10,3 +10,11 @@ I can't figure out how to do the same in micronaut. I tried using the [Applicati
 [mnclose]: https://docs.micronaut.io/3.7.4/api/io/micronaut/context/LifeCycle.html#close--
 
 See the file at [src/main/java/Reproducer.java](src/main/java/Reproducer.java) to see a demonstration of the issue.
+
+## usage
+
+the way to "run" this repository is to execute the default task on the root project, aka:
+
+```shell
+./gradlew
+```
