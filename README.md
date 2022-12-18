@@ -8,3 +8,5 @@ I can't figure out how to do the same in micronaut. I tried using the [Applicati
 
 [mnac]: https://docs.micronaut.io/3.7.4/api/io/micronaut/context/ApplicationContext.html#stop--
 [mnclose]: https://docs.micronaut.io/3.7.4/api/io/micronaut/context/LifeCycle.html#close--
+
+See the file at [src/main/java/Reproducer.java](src/main/java/Reproducer.java) to see a demonstration of the issue.
